@@ -1,0 +1,79 @@
+@use "mixins" as m;
+
+// Author: Kevin Powell
+// Youtube: https://www.youtube.com/watch?v=bj0Z_GncIwY
+// CodePen: https://codepen.io/kevinpowell/pen/yyLYoZO?editors=1100
+
+$columns: 12;
+$gap: 1rem;
+
+.gap-0 {
+  gap: 0 !important;
+}
+.gap-1 {
+  gap: ($gap * 0.25) !important;
+}
+.gap-2 {
+  gap: ($gap * 0.5) !important;
+}
+.gap-3 {
+  gap: $gap !important;
+}
+.gap-4 {
+  gap: ($gap * 1.5) !important;
+}
+.gap-5 {
+  gap: ($gap * 2) !important;
+}
+
+.grid > [class*="span-sm"],
+.grid > [class*="span-md"],
+.grid > [class*="span-lg"],
+.grid > [class*="span-xl"],
+.grid > [class*="span-xxl"],
+.grid > [class*="span-"] {
+  grid-column: 1 / -1;
+}
+
+.auto-grid {
+  display: grid;
+  gap: var(--gap, 1rem);
+  grid-template-columns: repeat(var(--grid-type, auto-fit), minmax(min(180px, 100%), 1fr));
+  //grid-auto-rows: 120px auto auto;
+  container-type: inline-size;
+}
+
+.grid {
+  display: grid;
+  gap: var(--gap, 1rem);
+  grid-template-columns: repeat($columns, 1fr);
+
+  @for $i from 1 through $columns {
+    @media (min-width: m.$md) {
+      .span-md-#{$i} {
+        grid-column: span #{$i} !important;
+      }
+    }
+  }
+  @for $i from 1 through $columns {
+    @media (min-width: m.$lg) {
+      .span-lg-#{$i} {
+        grid-column: span #{$i} !important;
+      }
+    }
+  }
+  @for $i from 1 through $columns {
+    @media (min-width: m.$xl) {
+      .span-xl-#{$i} {
+        grid-column: span #{$i} !important;
+      }
+    }
+  }
+  @for $i from 1 through $columns {
+    @media (min-width: m.$xxl) {
+      .span-xxl-#{$i} {
+        grid-column: span #{$i} !important;
+      }
+    }
+  }
+}

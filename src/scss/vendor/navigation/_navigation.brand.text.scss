@@ -1,0 +1,21 @@
+@use "variables";
+
+
+/* NAVIGATION BRAND TEXT
+================================*/
+.navigation-brand-text{	
+	a{
+		font-size: variables.$navigation-brand-font-size;
+		font-weight: variables.$navigation-brand-font-weight;
+		color: variables.$navigation-brand-color;
+		text-decoration: none;
+		
+		@media (min-width: variables.$landscape-width){
+			font-size: variables.$navigation-brand-font-size-landscape;
+		}
+	}
+	
+	.navigation-header &{
+		padding: 0 1rem;
+	}
+}

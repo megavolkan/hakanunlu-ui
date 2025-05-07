@@ -1,0 +1,151 @@
+@use "flex-mixins/flex";
+@use "mixins";
+@use "variables";
+
+
+/* NAVIGATION BODY
+================================*/
+.navigation-body{
+	width: variables.$navigation-offcanvas-width;
+	height: 100%;
+	position: fixed;
+	top: 0;
+	left: -100%;
+	overflow-x: hidden;
+	overflow-y: auto;
+	background-color: variables.$navigation-body-background-color;
+	z-index: 20000;
+	@include mixins.transition(left .8s cubic-bezier(.1, .1, .1, .1), right .8s cubic-bezier(.1, .1, .1, .1));
+	
+	@media (min-width: variables.$navigation-offcanvas-medium-large-breakpoint){
+		width: variables.$navigation-offcanvas-medium-large-width;
+	}
+	
+	@media (min-width: variables.$landscape-width){
+		@include flex.flex();
+		@include flex.flexAlignCenterVertically();
+		width: 100%;
+		position: relative;
+		left: auto;
+		overflow: visible;
+		z-index: auto;
+		background-color: transparent;
+		@include mixins.transition(all 0s ease 0s);
+	}
+	
+	&.offcanvas-right{
+		left: auto;
+		right: -100%;
+		
+		@media (min-width: variables.$landscape-width){
+			right: auto;
+		}
+	}
+	
+	&.is-visible{
+		left: 0;
+		@include mixins.transition(left .8s, right .8s);
+	}
+	
+	&.offcanvas-right.is-visible{
+		right: 0;
+		left: auto;
+		
+		@media (min-width: variables.$landscape-width){
+			right: auto;
+		}
+	}
+	
+	&.is-invisible{
+		left: -100%;
+	}
+	
+	&.offcanvas-right.is-invisible{
+		right: -100%;
+	}
+	
+	&.scroll-momentum{
+		-webkit-overflow-scrolling: touch;
+	}
+	
+	@media (min-width: variables.$landscape-width){
+		// Centered navigation 
+		.navigation-centered &{
+			@include flex.flexAlignCenter();
+		}
+		
+		// Justified navigation
+		.navigation-justified &{
+			@include flex.flexAlignBetween();
+		}
+		
+		// Navigation with logo on top
+		.navigation-logo-top &{
+			@include flex.flexColumn();
+		}
+	}
+}
+
+// Navigation body header
+.navigation-body-header{
+	@include flex.flex();
+	@include flex.flexAlignCenterVertically();
+	@include flex.flexAlignBetween();
+	padding: variables.$navigation-body-header-padding;
+	border-bottom: solid 1px variables.$navigation-body-header-border;
+	
+	@media (min-width: variables.$landscape-width){
+		border: none;
+		
+		.navigation-centered &{	
+			padding: 0;
+		}
+		.navigation-logo-top &{
+			padding-top: 20px;
+		}
+	}
+}
+
+// Close button
+.navigation-body-close-button{
+	@include flex.flex();
+	@include flex.flexAlignCenter();
+	@include flex.flexAlignCenterVertically();
+	width: 30px;
+	height: 30px;
+	margin-left: auto;
+	padding-bottom: 2px;
+	line-height: initial;
+	text-align: center;
+	font-size: variables.$navigation-body-close-button-font-size;
+	color: variables.$navigation-body-close-button-color;
+	cursor: pointer;
+	
+	@media (min-width: variables.$landscape-width){
+		display: none;
+	}
+}
+
+// Navigation body section
+.navigation-body-section{
+	width: 100%;
+	padding: variables.$navigation-body-section-padding;
+	display: inline-flex;
+	@include flex.flexColumn();
+	
+	@media (min-width: variables.$landscape-width){
+		width: auto;
+		display: inline-block;
+	}
+	
+	& + &{
+		padding-top: 0;	
+		
+		@media (min-width: variables.$landscape-width){
+			padding-top: variables.$navigation-body-section-padding;
+		}
+	}
+}
+
+
+

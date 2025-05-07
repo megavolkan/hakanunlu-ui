@@ -1,0 +1,64 @@
+@use "flex-mixins/flex";
+@use "variables";
+
+
+/* NAVIGATION SOCIAL MENU
+================================*/
+.navigation-social-menu{
+	@include flex.flex();
+	@include flex.flexAlignCenter();
+	width: 100%;
+	padding: variables.$navigation-social-menu-padding;
+	text-align: center;
+	
+	@media (min-width: variables.$landscape-width){
+		width: auto;
+	}
+	
+	@media (max-width: variables.$landscape-width - 1px){
+		padding: 16px;
+	}
+	
+	.navigation-item{
+		width: auto;
+		display: inline-block;
+		
+		.navigation-link{
+			margin: 0;
+			padding: variables.$navigation-social-menu-link-padding;
+			border: none;
+			
+			i{
+				@include flex.flex();
+				@include flex.flexAlignCenter();
+				@include flex.flexAlignCenterVertically();
+				width: variables.$navigation-social-menu-icon-width;
+				height: variables.$navigation-social-menu-icon-height;
+				margin: 0;
+				line-height: initial;
+				font-size: variables.$navigation-social-menu-icon-size;
+				border-radius: variables.$navigation-social-menu-icon-border-radius;
+				background-color: variables.$navigation-social-menu-icon-background-color;
+				
+				&:not([class*=fa]):before{
+					margin-right: -1px;
+				}
+			}
+		}
+		
+		&:last-child{
+			.navigation-link{
+				padding-right: 0;
+			}
+		}
+		&:first-child{
+			.navigation-link{
+				padding-left: 0;
+			}
+		}
+		
+		@media (max-width: variables.$landscape-width - 1px){
+			display: flex;
+		}
+	}
+}

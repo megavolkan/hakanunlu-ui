@@ -1,0 +1,29 @@
+@use "variables";
+
+
+/* NAVIGATION BADGE
+================================*/
+.navigation-badge{
+	min-width: variables.$navigation-badge-min-width;
+	height: variables.$navigation-badge-height;
+	margin: 0 5px;
+	display: inline-block;
+	line-height: 18px;
+	text-align: center;
+	font-size: variables.$navigation-badge-font-size;
+	color: variables.$navigation-badge-color;
+	border-radius: variables.$navigation-badge-border-radius;
+	background-color: variables.$navigation-badge-background-color;
+	
+	@media (min-width: variables.$landscape-width){
+		.navigation-link &{
+			position: absolute;
+			right: -2px;
+			top: calc(50% + -20px);
+		}
+		
+		.navigation-dropdown-link &{
+			position: static;
+		}
+	}
+}

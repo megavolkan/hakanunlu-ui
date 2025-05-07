@@ -1,0 +1,40 @@
+@use "flex-mixins/flex";
+@use "variables";
+
+
+/* NAVIGATION LOGO
+================================*/
+.navigation-logo{
+	@include flex.flex();
+	@include flex.flexAlignCenterVertically();
+	
+	a{
+		@include flex.flex();
+		@include flex.flexAlignCenterVertically();
+		
+		img{
+			height: variables.$navigation-logo-height;
+			display: block;
+			
+			@media (min-width: variables.$landscape-width){
+				height: variables.$navigation-logo-height-landscape;
+			}
+		}
+	}
+	
+	.navigation-logo-top .navigation-body &{
+		img{
+			width: auto;
+			height: auto;
+		}
+	}
+	
+	.navigation-header &{
+		padding: 0 1rem;
+	}
+	
+	&.navigation-item a img{
+		width: auto;
+		height: auto;
+	}
+}
