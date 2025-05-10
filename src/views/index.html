@@ -1,54 +1,378 @@
 <!DOCTYPE html>
-<html lang="en">
-  @@include('./inc/_head.html')
+<html lang="tr">
+@@include('./inc/_head.html')
 
-  <body>
-    @@include('./inc/_header.html')
-    <main class="flow content-grid">
-      <h1>Deneme</h1>
-      <p>
-        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Tenetur eum inventore, quae accusamus, quas totam qui consectetur modi doloribus blanditiis nisi ratione vitae, iusto perferendis iste
-        possimus ea nemo laudantium.
-      </p>
-
-      <div>
-        <a href="#" class="button">Buton</a>
-        <a href="#" class="button button-sm">Buton</a>
-        <button class="button">Buton</button>
-        <button class="button button-outline-lg">Buton</button>
-      </div>
+<body>
+  @@include('./inc/_header.html')
+  <main class="flow content-grid">
+    <div class="main-hero full-width content-grid">
+      <img src="assets/img/hero-bg.webp" class="main-hero-bg">
+      <img src="assets/img/hero-bottom.svg" class="main-hero-bottom">
 
       <div class="grid">
-        <div class="span-1">
-          Lorem ipsum dolor sit amet consectetur, adipisicing elit. Animi maxime velit nostrum, fuga earum totam quasi ipsum ea modi voluptas architecto repudiandae repellendus minus hic porro
-          doloremque dolore exercitationem odit.
+        <div class="span-lg-7">
+          <div class="main-hero-content">
+            <div class="main-hero-isim">Hakan ÜNLÜ</div>
+            <div class="main-hero-titr">AKREDİTE TİCARİ PROFESYONEL</div>
+            <h1 class="main-hero-slogan">Ticari Gayrimenkulde Farklı Bir İmza</h1>
+            <img src="assets/img/hero-logolar.svg" alt="Hakan Ünlü'nün sektörel logoları" class="main-hero-logolar">
+          </div>
         </div>
-        <div class="span-2">
-          Lorem ipsum dolor sit amet consectetur, adipisicing elit. Animi maxime velit nostrum, fuga earum totam quasi ipsum ea modi voluptas architecto repudiandae repellendus minus hic porro
-          doloremque dolore exercitationem odit.
-        </div>
-        <div class="span-3">
-          Lorem ipsum dolor sit amet consectetur, adipisicing elit. Animi maxime velit nostrum, fuga earum totam quasi ipsum ea modi voluptas architecto repudiandae repellendus minus hic porro
-          doloremque dolore exercitationem odit.
+        <div class="span-lg-5">
+          <div class="main-hero-portrait">
+            <img src="assets/img/hakan-unlu.webp" alt="Hakan Ünlü">
+          </div>
         </div>
       </div>
 
-      <div class="grid gap-3">
-        <div class="span-md-1 bg-primary" style="height: 100px"></div>
-        <div class="span-md-2 bg-primary" style="height: 100px"></div>
-        <div class="span-md-3 bg-primary" style="height: 100px"></div>
-        <div class="span-md-4 bg-primary" style="height: 100px"></div>
-        <div class="span-md-5 bg-primary" style="height: 100px"></div>
-        <div class="span-md-6 bg-primary" style="height: 100px"></div>
-        <div class="span-md-7 bg-primary" style="height: 100px"></div>
-        <div class="span-md-8 bg-primary" style="height: 100px"></div>
-        <div class="span-md-9 bg-primary" style="height: 100px"></div>
-        <div class="span-md-10 bg-primary" style="height: 100px"></div>
-        <div class="span-md-11 bg-primary" style="height: 100px"></div>
-        <div class="span-md-12 bg-primary" style="height: 100px"></div>
-      </div>
-    </main>
+    </div>
 
-    @@include('./inc/_footer.html')
-  </body>
+    <section class="main-portfoyler-section">
+      <div class="section-title">
+        <h2>Portföyler</h2>
+        <div class="section-title-action">
+          <a href="/portfoyler" class="arrow-link">TÜM PORTFÖYLER</a>
+          <div class="slider-buttons">
+            <button class="slider-button-prev">@@include('../icons/arrow-left.svg')</button>
+            <button class="slider-button-next">@@include('../icons/arrow-right.svg')</button>
+          </div>
+        </div>
+      </div>
+      <div class="portfoyler-slider">
+        <div class="swiper">
+          <div class="swiper-wrapper">
+            <a href="#" class="swiper-slide portfoy-card">
+              <div class="portfoy-card-header">
+                <div class="badge">Satılık Arsa</div>
+                <img src="assets/img/portfoy-1.jpeg" alt="">
+              </div>
+              <div class="portfoy-card-body">
+                <div class="portfoy-card-lokasyon">Kocaeli, Gebze, Pelitli Mah.</div>
+                <div class="portfoy-card-title">GEBZE PELİTLİ’ DE SATILIK 8.319 m2 TİCARİ İMARLI ARSA</div>
+                <div class="portfoy-card-fiyat">Fiyat için bilgi alınız</div>
+              </div>
+            </a>
+            <a href="#" class="swiper-slide portfoy-card">
+              <div class="portfoy-card-header">
+                <div class="badge">Satılık Arsa</div>
+                <img src="assets/img/portfoy-1.jpeg" alt="">
+              </div>
+              <div class="portfoy-card-body">
+                <div class="portfoy-card-lokasyon">Kocaeli, Gebze, Pelitli Mah.</div>
+                <div class="portfoy-card-title">GEBZE PELİTLİ’ DE SATILIK 8.319 m2 TİCARİ İMARLI ARSA</div>
+                <div class="portfoy-card-fiyat">Fiyat için bilgi alınız</div>
+              </div>
+            </a>
+            <a href="#" class="swiper-slide portfoy-card">
+              <div class="portfoy-card-header">
+                <div class="badge">Satılık Arsa</div>
+                <img src="assets/img/portfoy-1.jpeg" alt="">
+              </div>
+              <div class="portfoy-card-body">
+                <div class="portfoy-card-lokasyon">Kocaeli, Gebze, Pelitli Mah.</div>
+                <div class="portfoy-card-title">GEBZE PELİTLİ’ DE SATILIK 8.319 m2 TİCARİ İMARLI ARSA</div>
+                <div class="portfoy-card-fiyat">Fiyat için bilgi alınız</div>
+              </div>
+            </a>
+            <a href="#" class="swiper-slide portfoy-card">
+              <div class="portfoy-card-header">
+                <div class="badge">Satılık Arsa</div>
+                <img src="assets/img/portfoy-1.jpeg" alt="">
+              </div>
+              <div class="portfoy-card-body">
+                <div class="portfoy-card-lokasyon">Kocaeli, Gebze, Pelitli Mah.</div>
+                <div class="portfoy-card-title">GEBZE PELİTLİ’ DE SATILIK 8.319 m2 TİCARİ İMARLI ARSA</div>
+                <div class="portfoy-card-fiyat">Fiyat için bilgi alınız</div>
+              </div>
+            </a>
+            <a href="#" class="swiper-slide portfoy-card">
+              <div class="portfoy-card-header">
+                <div class="badge">Satılık Arsa</div>
+                <img src="assets/img/portfoy-1.jpeg" alt="">
+              </div>
+              <div class="portfoy-card-body">
+                <div class="portfoy-card-lokasyon">Kocaeli, Gebze, Pelitli Mah.</div>
+                <div class="portfoy-card-title">GEBZE PELİTLİ’ DE SATILIK 8.319 m2 TİCARİ İMARLI ARSA</div>
+                <div class="portfoy-card-fiyat">Fiyat için bilgi alınız</div>
+              </div>
+            </a>
+            <a href="#" class="swiper-slide portfoy-card">
+              <div class="portfoy-card-header">
+                <div class="badge">Satılık Arsa</div>
+                <img src="assets/img/portfoy-1.jpeg" alt="">
+              </div>
+              <div class="portfoy-card-body">
+                <div class="portfoy-card-lokasyon">Kocaeli, Gebze, Pelitli Mah.</div>
+                <div class="portfoy-card-title">GEBZE PELİTLİ’ DE SATILIK 8.319 m2 TİCARİ İMARLI ARSA</div>
+                <div class="portfoy-card-fiyat">Fiyat için bilgi alınız</div>
+              </div>
+            </a>
+            <a href="#" class="swiper-slide portfoy-card">
+              <div class="portfoy-card-header">
+                <div class="badge">Satılık Arsa</div>
+                <img src="assets/img/portfoy-1.jpeg" alt="">
+              </div>
+              <div class="portfoy-card-body">
+                <div class="portfoy-card-lokasyon">Kocaeli, Gebze, Pelitli Mah.</div>
+                <div class="portfoy-card-title">GEBZE PELİTLİ’ DE SATILIK 8.319 m2 TİCARİ İMARLI ARSA</div>
+                <div class="portfoy-card-fiyat">Fiyat için bilgi alınız</div>
+              </div>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="talep-formu-section">
+      <div class="grid">
+        <div class="talep-formu-title">
+          <h3>Talep Formu</h3>
+          <div class="talep-formu-yuvarlak"></div>
+          <img src="assets/img/fabrika-cizim.svg" alt="Talep Formu Temsili Fabrika Çizimi" class="talep-formu-img">
+        </div>
+
+        <form action="" class="form talep-formu">
+          <p>Formu doldurarak iletişime geçebilir veya mülkünüzün değerlemesinin yapılmasını talep edebilirsiniz.</p>
+          <div class="grid">
+            <div class="span-lg-6">
+              <input type="text" class="form-control" placeholder="ADINIZ *">
+            </div>
+            <div class="span-lg-6">
+              <input type="text" class="form-control" placeholder="SOYADINIZ *">
+            </div>
+            <div class="span-lg-6">
+              <input type="tel" class="form-control" placeholder="TELEFON NO *">
+            </div>
+            <div class="span-lg-6">
+              <input type="email" class="form-control" placeholder="E-POSTA *">
+            </div>
+            <div class="span-lg-6">
+              <input type="text" class="form-control" placeholder="ADA NO *">
+            </div>
+            <div class="span-lg-6">
+              <input type="text" class="form-control" placeholder="PARSEL NO *">
+            </div>
+            <div class="span-lg-12">
+              <input type="text" class="form-control" placeholder="MÜLK BİLGİSİ (İl, İlçe, Mahalle) *">
+            </div>
+            <div class="span-lg-12">
+              <button class="btn-altin-gradient btn-full" type="submit">BAŞVUR</button>
+            </div>
+          </div>
+        </form>
+      </div>
+    </section>
+    <section class="main-haberler-section">
+      <div class="section-title">
+        <h2>Haberler</h2>
+        <div class="section-title-action">
+          <a href="/haberler" class="arrow-link">TÜM HABERLER</a>
+          <div class="slider-buttons">
+            <button class="slider-button-prev">@@include('../icons/arrow-left.svg')</button>
+            <button class="slider-button-next">@@include('../icons/arrow-right.svg')</button>
+          </div>
+        </div>
+      </div>
+      <div class="haberler-slider">
+        <div class="swiper">
+          <div class="swiper-wrapper">
+            <a href="#" class="swiper-slide haber-card">
+              <div class="haber-card-ok">@@include('../icons/arrow-up-right-square.svg')</div>
+              <img src="assets/img/portfoy-1.jpeg" alt="">
+              <div class="haber-card-content">
+                <div class="haber-card-tarih">12 MART 2025</div>
+                <div class="haber-card-title">69. Tigader toplantısında sertifika teslimi.</div>
+              </div>
+            </a>
+            <a href="#" class="swiper-slide haber-card">
+              <div class="haber-card-ok">@@include('../icons/arrow-up-right-square.svg')</div>
+              <img src="assets/img/portfoy-1.jpeg" alt="">
+              <div class="haber-card-content">
+                <div class="haber-card-tarih">12 MART 2025</div>
+                <div class="haber-card-title">69. Tigader toplantısında sertifika teslimi.</div>
+              </div>
+            </a>
+            <a href="#" class="swiper-slide haber-card">
+              <div class="haber-card-ok">@@include('../icons/arrow-up-right-square.svg')</div>
+              <img src="assets/img/portfoy-1.jpeg" alt="">
+              <div class="haber-card-content">
+                <div class="haber-card-tarih">12 MART 2025</div>
+                <div class="haber-card-title">69. Tigader toplantısında sertifika teslimi.</div>
+              </div>
+            </a>
+            <a href="#" class="swiper-slide haber-card">
+              <div class="haber-card-ok">@@include('../icons/arrow-up-right-square.svg')</div>
+              <img src="assets/img/portfoy-1.jpeg" alt="">
+              <div class="haber-card-content">
+                <div class="haber-card-tarih">12 MART 2025</div>
+                <div class="haber-card-title">69. Tigader toplantısında sertifika teslimi.</div>
+              </div>
+            </a>
+            <a href="#" class="swiper-slide haber-card">
+              <div class="haber-card-ok">@@include('../icons/arrow-up-right-square.svg')</div>
+              <img src="assets/img/portfoy-1.jpeg" alt="">
+              <div class="haber-card-content">
+                <div class="haber-card-tarih">12 MART 2025</div>
+                <div class="haber-card-title">69. Tigader toplantısında sertifika teslimi.</div>
+              </div>
+            </a>
+            <a href="#" class="swiper-slide haber-card">
+              <div class="haber-card-ok">@@include('../icons/arrow-up-right-square.svg')</div>
+              <img src="assets/img/portfoy-1.jpeg" alt="">
+              <div class="haber-card-content">
+                <div class="haber-card-tarih">12 MART 2025</div>
+                <div class="haber-card-title">69. Tigader toplantısında sertifika teslimi.</div>
+              </div>
+            </a>
+            <a href="#" class="swiper-slide haber-card">
+              <div class="haber-card-ok">@@include('../icons/arrow-up-right-square.svg')</div>
+              <img src="assets/img/portfoy-1.jpeg" alt="">
+              <div class="haber-card-content">
+                <div class="haber-card-tarih">12 MART 2025</div>
+                <div class="haber-card-title">69. Tigader toplantısında sertifika teslimi.</div>
+              </div>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="piyasalar-section content-grid full-width">
+      <div class="grid">
+        <div class="span-lg-3">
+          <h3>Piyasalarda Bugün</h3>
+          <div class="piyasa-tarih">21 Ağustos 2025</div>
+        </div>
+        <div class="span-lg-3">
+          <div class="piyasa-card">
+            <div class="piyasa-card-title">DOLAR ($)</div>
+            <div class="piyasa-card-value">38.1946</div>
+          </div>
+        </div>
+        <div class="span-lg-3">
+          <div class="piyasa-card">
+            <div class="piyasa-card-title">EURO (€)</div>
+            <div class="piyasa-card-value">44.1319</div>
+          </div>
+        </div>
+        <div class="span-lg-3">
+          <div class="piyasa-card">
+            <div class="piyasa-card-title">ALTIN (GR)</div>
+            <div class="piyasa-card-value">4179.24</div>
+          </div>
+        </div>
+      </div>
+      <div class="piyasa-disclaimer">* Veriler bilgi amaçlı olarak üçüncü parti kaynaktan alınmaktadır. Gecikme ve hata olabilir.</div>
+    </section>
+
+    <section class="main-musteri-yorumlari content-grid">
+      <div class="section-title">
+        <h2>Müşteri Yorumları</h2>
+        <div class="section-title-action">
+          <a href="/musteri-yorumlari" class="arrow-link">TÜM YORUMLAR</a>
+        </div>
+      </div>
+      <div class="grid">
+        <a href="#" class="main-musteri-yorum-card span-lg-4">
+          <div class="main-musteri-yorum-card-body">
+            <div class="main-musteri-yorum-card-title">H**** ****</div>
+            <div class="main-musteri-yorum-card-yildiz">
+              <span>&#9733;&#9733;&#9733;&#9733;&#9733;</span>
+            </div>
+            <div class="main-musteri-yorum-card-text">
+              Öncelikle profesyonellik anlamında daha önce rastlamadığımız ölçüde bir hizmet aldığımızı belirtmeliyim. Sürecin başlangıcında mülkün...
+            </div>
+          </div>
+          <div class="main-musteri-yorum-card-footer">
+            16.08.2020
+          </div>
+        </a>
+        <a href="#" class="main-musteri-yorum-card span-lg-4">
+          <div class="main-musteri-yorum-card-body">
+            <div class="main-musteri-yorum-card-title">H**** ****</div>
+            <div class="main-musteri-yorum-card-yildiz">
+              <span>&#9733;&#9733;&#9733;&#9733;&#9733;</span>
+            </div>
+            <div class="main-musteri-yorum-card-text">
+              Öncelikle profesyonellik anlamında daha önce rastlamadığımız ölçüde bir hizmet aldığımızı belirtmeliyim. Sürecin başlangıcında mülkün...
+            </div>
+          </div>
+          <div class="main-musteri-yorum-card-footer">
+            16.08.2020
+          </div>
+        </a>
+        <a href="#" class="main-musteri-yorum-card span-lg-4">
+          <div class="main-musteri-yorum-card-body">
+            <div class="main-musteri-yorum-card-title">H**** ****</div>
+            <div class="main-musteri-yorum-card-yildiz">
+              <span>&#9733;&#9733;&#9733;&#9733;&#9733;</span>
+            </div>
+            <div class="main-musteri-yorum-card-text">
+              Öncelikle profesyonellik anlamında daha önce rastlamadığımız ölçüde bir hizmet aldığımızı belirtmeliyim. Sürecin başlangıcında mülkün...
+            </div>
+          </div>
+          <div class="main-musteri-yorum-card-footer">
+            16.08.2020
+          </div>
+        </a>
+      </div>
+    </section>
+    <section class="main-blog-section content-grid full-width bg-light py-6">
+      <div class="section-title">
+        <h2>Blog</h2>
+        <div class="section-title-action">
+          <a href="/blog" class="arrow-link">TÜM YAZILAR</a>
+        </div>
+      </div>
+
+      <div class="main-blog-grid">
+        <a href="#" class="main-blog-card">
+          <div class="main-blog-card-img">
+            <img src="assets/img/portfoy-1.jpeg" alt="">
+          </div>
+          <div class="main-blog-card-content">
+            <div class="main-blog-card-title">2025 İlk çeyrek itibarıyla gayrimenkul piyasa analizi.</div>
+            <div class="main-blog-card-tarih">25 Nisan 2025</div>
+            <div class="main-blog-card-link">Devamını Oku</div>
+          </div>
+        </a>
+        <a href="#" class="main-blog-card">
+          <div class="main-blog-card-img">
+            <img src="assets/img/portfoy-1.jpeg" alt="">
+          </div>
+          <div class="main-blog-card-content">
+            <div class="main-blog-card-title">2025 İlk çeyrek itibarıyla gayrimenkul piyasa analizi.</div>
+            <div class="main-blog-card-tarih">25 Nisan 2025</div>
+            <div class="main-blog-card-link">Devamını Oku</div>
+          </div>
+        </a>
+        <a href="#" class="main-blog-card">
+          <div class="main-blog-card-img">
+            <img src="assets/img/portfoy-1.jpeg" alt="">
+          </div>
+          <div class="main-blog-card-content">
+            <div class="main-blog-card-title">2025 İlk çeyrek itibarıyla gayrimenkul piyasa analizi.</div>
+            <div class="main-blog-card-tarih">25 Nisan 2025</div>
+            <div class="main-blog-card-link">Devamını Oku</div>
+          </div>
+        </a>
+        <a href="#" class="main-blog-card">
+          <div class="main-blog-card-img">
+            <img src="assets/img/portfoy-1.jpeg" alt="">
+          </div>
+          <div class="main-blog-card-content">
+            <div class="main-blog-card-title">2025 İlk çeyrek itibarıyla gayrimenkul piyasa analizi.</div>
+            <div class="main-blog-card-tarih">25 Nisan 2025</div>
+            <div class="main-blog-card-link">Devamını Oku</div>
+          </div>
+        </a>
+      </div>
+    </section>
+
+  </main>
+
+  @@include('./inc/_footer.html')
+  @@include('./inc/_main-nav.html')
+</body>
+
 </html>

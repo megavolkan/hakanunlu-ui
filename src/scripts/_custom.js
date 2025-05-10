@@ -18,36 +18,36 @@
     });
   }
 
-  function heroSlider() {
-    if (document.querySelector('.hero-slider')) {
-      const swiper = new Swiper('.hero-slider .swiper', {
-        loop: true,
-        autoplay: {
-          delay: 2500,
-          disableOnInteraction: false,
-        },
-        pagination: {
-          el: ".swiper-pagination",
-          clickable: true
-        },
-        navigation: {
-          nextEl: '.hero-slider .slider-button-next',
-          prevEl: '.hero-slider .slider-button-prev',
-        },
-      })
-    }
-  }
+  // function heroSlider() {
+  //   if (document.querySelector('.hero-slider')) {
+  //     const swiper = new Swiper('.hero-slider .swiper', {
+  //       loop: true,
+  //       autoplay: {
+  //         delay: 2500,
+  //         disableOnInteraction: false,
+  //       },
+  //       pagination: {
+  //         el: ".swiper-pagination",
+  //         clickable: true
+  //       },
+  //       navigation: {
+  //         nextEl: '.hero-slider .slider-button-next',
+  //         prevEl: '.hero-slider .slider-button-prev',
+  //       },
+  //     })
+  //   }
+  // }
 
-  // Önce Sonra Slider
-  function onceSonraSlider() {
-    if (document.querySelector('.once-sonra-slider')) {
-      const slider = new Swiper('.once-sonra-slider .swiper', {
+  // Portföy Slider
+  function portfoySlider() {
+    if (document.querySelector(".main-portfoyler-section")) {
+      const slider = new Swiper(".main-portfoyler-section .swiper", {
         slidesPerView: 1,
         spaceBetween: 30,
         loop: true,
         navigation: {
-          nextEl: ".once-sonra-slider .slider-button-outline-next",
-          prevEl: ".once-sonra-slider .slider-button-outline-prev",
+          nextEl: ".main-portfoyler-section .slider-button-next",
+          prevEl: ".main-portfoyler-section .slider-button-prev",
         },
         breakpoints: {
           768: {
@@ -56,10 +56,34 @@
           992: {
             slidesPerView: 3,
           },
-        }
-      })
+          1200: {
+            slidesPerView: 4,
+          },
+        },
+      });
     }
-
+  }
+  // haber Slider
+  function haberSlider() {
+    if (document.querySelector(".main-haberler-section")) {
+      const slider = new Swiper(".main-haberler-section .swiper", {
+        slidesPerView: 1,
+        spaceBetween: 30,
+        loop: true,
+        navigation: {
+          nextEl: ".main-haberler-section .slider-button-next",
+          prevEl: ".main-haberler-section .slider-button-prev",
+        },
+        breakpoints: {
+          768: {
+            slidesPerView: 2,
+          },
+          992: {
+            slidesPerView: 3,
+          },
+        },
+      });
+    }
   }
 
   // Intl Tel Input
@@ -102,33 +126,41 @@
   // Scroll top Button
 
   function scrollTop() {
-    const btnScrollTop = document.getElementById('scrollTop')
-    document.addEventListener('scroll', () => {
+    const btnScrollTop = document.getElementById("scrollTop");
+    document.addEventListener("scroll", () => {
       if (window.scrollY > 1000) {
-        btnScrollTop.classList.remove('hide-btn');
+        btnScrollTop.classList.remove("hide-btn");
       } else {
-        btnScrollTop.classList.add('hide-btn');
+        btnScrollTop.classList.add("hide-btn");
       }
-    })
+    });
 
-    btnScrollTop.addEventListener('click', () => {
+    btnScrollTop.addEventListener("click", () => {
       window.scrollTo({
         top: 0,
-        behavior: "smooth"
+        behavior: "smooth",
       });
-    })
+    });
   }
 
-  mainNavigation()
-  heroSlider()
+  function mainNav() {
+    const mainNav = document.querySelector(".main-nav");
+    const mainNavBg = document.querySelector(".main-nav-bg");
+    const btnNavToggler = document.querySelector(".nav-toggler");
+    const btnNavClose = document.querySelector(".nav-close");
+
+    const toggleNav = () => mainNav.classList.toggle("active");
+    btnNavToggler.addEventListener("click", toggleNav);
+    btnNavClose.addEventListener("click", toggleNav);
+    mainNavBg.addEventListener("click", toggleNav);
+  }
+
+  mainNavigation();
+  // heroSlider()
   // telefonInput()
-  // onceSonraSlider()
-  // videoSlider()
-  // videoSayfaSlider()
-  // deneyimSlider()
+  portfoySlider();
+  haberSlider();
+  mainNav();
   // initAcc('.accordion.v1', true);
-  // uygulamalarSlider()
   // scrollTop()
-
-
 })();

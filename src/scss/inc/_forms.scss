@@ -54,6 +54,21 @@ select {
   &:focus {
     @include focus-style;
   }
+
+  &::placeholder {
+    color: #333;
+  }
+
+  &:active,
+  &:focus-visible,
+  &:focus {
+    box-shadow: none;
+    border-color: green;
+
+    &::placeholder {
+      opacity: 0.25;
+    }
+  }
 }
 
 textarea {
