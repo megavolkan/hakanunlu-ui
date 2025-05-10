@@ -322,6 +322,10 @@
   padding-block: 40px;
   color: #fff;
   z-index: 99;
+
+  @media (width < inc.$lg) {
+    padding-block: 10px;
+  }
 }
 
 .main-header-grid {
@@ -386,6 +390,11 @@ div:has(.main-hero-content) {
 
 .main-hero-content {
   margin-block: auto;
+
+  @media (width < inc.$lg) {
+    text-align: center;
+    margin-top: 20vh;
+  }
 }
 
 .main-hero-portrait {
@@ -394,18 +403,30 @@ div:has(.main-hero-content) {
   flex-direction: column;
   justify-content: end;
   overflow: hidden;
+
+  @media (width < inc.$lg) {
+    //height: 50%;
+  }
 }
 
 .main-hero-isim {
   font-size: 5rem;
   font-weight: 700;
   line-height: 1;
+
+  @media (width < inc.$lg) {
+    font-size: 2.4rem;
+  }
 }
 
 .main-hero-titr {
   font-size: 1.4rem;
   font-weight: 800;
   margin-bottom: 2rem;
+
+  @media (width < inc.$lg) {
+    font-size: 0.9rem;
+  }
 }
 
 .main-hero-slogan {
@@ -413,10 +434,19 @@ div:has(.main-hero-content) {
   font-weight: 200;
   line-height: 1;
   margin-bottom: 1.5rem;
+
+  @media (width < inc.$lg) {
+    font-size: 3rem;
+  }
 }
 
 .main-hero-logolar {
   max-width: 500px;
+
+  @media (width < inc.$lg) {
+    max-width: 240px;
+    margin-inline: auto;
+  }
 }
 
 .section-title {
