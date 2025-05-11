@@ -109,6 +109,12 @@
   .text-white {
     color: #fff !important;
   }
+  .text-primary {
+    color: var(--clr-primary) !important;
+  }
+  .text-secondary {
+    color: var(--clr-secondary) !important;
+  }
 
   .bg-primary {
     background-color: var(--clr-primary) !important;
@@ -123,18 +129,21 @@
     text-align: center;
   }
 
-  .body-copy {
-    line-height: 1.65;
-    letter-spacing: 1px;
-    font-size: 0.8rem;
-    font-weight: 400;
+  hr {
+    border: none;
+    border-bottom: 1px solid #cecece;
+    margin-block: 1rem;
   }
 
-  .section-title {
-    color: var(--clr-primary);
-    font-weight: 400;
-    font-size: clamp(1.5rem, 5vw - 1rem, 3rem);
-    margin-bottom: 1rem;
+  strong {
+    font-weight: 700;
+  }
+
+  .body-copy {
+    line-height: 1.85;
+    font-size: 1.1rem;
+    font-weight: 300;
+    margin-bottom: 10px;
   }
 
   .hidden-desktop {
@@ -315,22 +324,31 @@
 }
 
 .main-header {
-  position: absolute;
-  top: 0;
-  inset-inline: 0;
-  width: 100%;
   padding-block: 40px;
   color: #fff;
-  z-index: 99;
+  background-image: var(--grd-lacivert);
 
   @media (width < inc.$lg) {
     padding-block: 10px;
   }
 }
 
+body:has(.main-hero) .main-header {
+  z-index: 99;
+  position: absolute;
+  top: 0;
+  inset-inline: 0;
+  width: 100%;
+  background-image: none;
+}
+
 .main-header-grid {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
+
+  @media (width < inc.$lg) {
+    grid-template-columns: 1fr 3fr 1fr;
+  }
 }
 
 .nav-toggler {
@@ -460,6 +478,16 @@ div:has(.main-hero-content) {
   h2 {
     font-size: 3rem;
     font-weight: 700;
+
+    @media (width < inc.$lg) {
+      font-size: 2.4rem;
+      line-height: 1.1;
+    }
+  }
+
+  @media (width < inc.$lg) {
+    flex-direction: column;
+    text-align: center;
   }
 }
 
@@ -467,6 +495,9 @@ div:has(.main-hero-content) {
   display: flex;
   align-items: center;
   gap: 1rem;
+  @media (width < inc.$lg) {
+    flex-direction: column;
+  }
 }
 
 .slider-buttons {
@@ -518,6 +549,7 @@ div:has(.main-hero-content) {
   background-image: var(--grd-lacivert);
   border-radius: var(--radius);
   color: #fff;
+  display: block;
 
   &:hover {
     .portfoy-card-title {
@@ -598,6 +630,8 @@ div:has(.main-hero-content) {
 
   h3 {
     font-size: 3rem;
+    position: relative;
+    z-index: 2;
   }
 
   img {
@@ -605,6 +639,16 @@ div:has(.main-hero-content) {
     z-index: 2;
     right: -20%;
     bottom: -10%;
+
+    @media (width < inc.$lg) {
+      display: none;
+    }
+  }
+
+  @media (width < inc.$lg) {
+    grid-column: 1 / -1;
+    text-align: center;
+    padding: 1rem;
   }
 }
 
@@ -638,10 +682,26 @@ div:has(.main-hero-content) {
   border-radius: var(--radius);
   padding: 2rem;
 
+  @media (width < inc.$lg) {
+    grid-column: 1 / -1;
+    padding: 2rem 1rem 1rem;
+  }
+
   p {
     font-size: 1.7rem;
     font-weight: 200;
     margin-bottom: 2rem;
+
+    @media (width < inc.$lg) {
+      font-size: 1rem;
+      text-align: center;
+    }
+  }
+
+  .grid {
+    @media (width < inc.$lg) {
+      gap: 10px;
+    }
   }
 }
 
@@ -743,16 +803,29 @@ div:has(.main-hero-content) {
   padding-block: 5rem;
   color: #fff;
 
+  @media (width < inc.$lg) {
+    text-align: center;
+  }
+
   h3 {
     font-size: 40px;
     font-weight: 700;
     margin-bottom: 2rem;
+
+    @media (width < inc.$lg) {
+      font-size: 2rem;
+      margin-bottom: 10px;
+    }
   }
 }
 
 .piyasa-tarih {
   font-size: 40px;
   font-weight: 300;
+
+  @media (width < inc.$lg) {
+    font-size: 2rem;
+  }
 }
 
 .piyasa-card {
@@ -762,6 +835,10 @@ div:has(.main-hero-content) {
   height: 100%;
   display: grid;
   place-content: center;
+
+  @media (width < inc.$lg) {
+    padding: 10px;
+  }
 }
 
 .piyasa-card-title {
@@ -769,6 +846,9 @@ div:has(.main-hero-content) {
   font-size: 18px;
   letter-spacing: 2px;
   margin-bottom: 10px;
+  @media (width < inc.$lg) {
+    margin-bottom: 0;
+  }
 }
 .piyasa-card-value {
   font-weight: 300;
@@ -843,6 +923,11 @@ div:has(.main-hero-content) {
       color: var(--clr-secondary);
     }
   }
+
+  @media (width < inc.$lg) {
+    gap: 10px;
+    align-items: start;
+  }
 }
 
 .main-blog-card-img {
@@ -852,6 +937,11 @@ div:has(.main-hero-content) {
   border: 1px solid #ebebeb;
   overflow: hidden;
   width: 25%;
+
+  @media (width < inc.$lg) {
+    width: 45%;
+    border-radius: var(--radius-sm);
+  }
 
   img {
     width: 100%;
@@ -873,6 +963,10 @@ div:has(.main-hero-content) {
   margin-bottom: 1rem;
   @include inc.line-clamp(2);
   transition: var(--transition-all);
+
+  @media (width < inc.$lg) {
+    font-size: 1.3rem;
+  }
 }
 
 .main-blog-card-link {
@@ -1020,6 +1114,10 @@ footer {
 
     .menu-wrapper {
       left: var(--menu-margin);
+
+      @media (width < inc.$lg) {
+        right: var(--menu-margin);
+      }
     }
   }
 
@@ -1129,3 +1227,65 @@ body:has(.main-nav.active) {
 }
 
 // Main Nav Sonu
+
+.breadcrumb {
+  color: var(--clr-primary);
+  display: flex;
+
+  a {
+    display: inline-block;
+    position: relative;
+    padding-block: 10px;
+    font-weight: 700;
+    font-size: 13px;
+    letter-spacing: 1px;
+    color: var(--clr-dark);
+    &:hover {
+      color: var(--kirmizi);
+    }
+    &:not(:last-child) {
+      margin-right: 5px;
+
+      &::after {
+        content: "\203A";
+        margin-left: 5px;
+        opacity: 0.5;
+      }
+    }
+  }
+}
+
+.section-baslik {
+  font-weight: 300;
+  font-size: 3rem;
+  border-bottom: 1px solid var(--clr-secondary);
+  margin-bottom: 1.6rem;
+}
+
+.hakkimda-aside {
+  line-height: 2;
+  p {
+    font-style: italic;
+    color: #838383;
+  }
+  @media (width >= inc.$lg) {
+    padding-inline-start: 5rem;
+  }
+}
+
+.badge-link {
+  display: inline-block;
+  border: 1px solid var(--clr-secondary);
+  background-color: #fff;
+  color: var(--clr-dark);
+  font-weight: 800;
+  font-size: 12px;
+  letter-spacing: 1px;
+  padding: 3px 15px;
+  border-radius: var(--radius-sm);
+
+  &:hover,
+  &.active {
+    background-image: var(--grd-altin);
+  }
+}
