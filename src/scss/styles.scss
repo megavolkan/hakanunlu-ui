@@ -1398,7 +1398,7 @@ body:has(.main-nav.active) {
 .portfoy-detay-aside {
   background-color: var(--clr-light);
   border-radius: var(--radius);
-  padding: 1rem;
+  padding: 2rem;
   margin-top: 2rem;
 }
 
@@ -1491,11 +1491,11 @@ body:has(.main-nav.active) {
   background-color: var(--clr-dark);
   color: #fff;
   font-weight: 800;
-  font-size: 15px;
+  font-size: 13px;
   letter-spacing: 1px;
   text-align: center;
   margin-inline: auto;
-  padding: 8px 25px;
+  padding: 6px 20px;
   border: 0;
   border-radius: var(--radius);
   text-transform: uppercase;
@@ -1507,5 +1507,43 @@ body:has(.main-nav.active) {
 
   &:hover {
     background-color: var(--kirmizi);
+  }
+}
+
+.form-bilgi-text {
+  font-size: 14px;
+  font-weight: 300;
+  font-style: italic;
+}
+
+[class^="span-lg-"]:has(.portfoy-detay-aside) {
+  position: relative;
+}
+
+.portfoy-detay-aside {
+  position: sticky;
+  top: 3rem;
+}
+
+.portfoy-detay-tablosu {
+  margin-top: 2rem;
+  border: 1px solid var(--clr-secondary);
+  border-radius: var(--radius);
+  padding: 2rem;
+  font-size: 12px;
+  table {
+    width: 100%;
+  }
+
+  tr:nth-child(even) {
+    background-color: var(--clr-light);
+  }
+
+  td {
+    padding: 5px 20px;
+  }
+
+  td:first-child {
+    font-weight: 800;
   }
 }
