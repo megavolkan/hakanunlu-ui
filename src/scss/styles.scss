@@ -159,7 +159,7 @@
   }
 
   section.section {
-    padding-block: clamp(2rem, 7vw, 8rem);
+    padding-block: clamp(2rem, 5vw, 6rem);
 
     & + section.section {
       padding-top: 0;
@@ -384,6 +384,7 @@ body:has(.main-hero) .main-header {
 
 .main-header-logo {
   height: 65px;
+  margin-inline: auto;
 }
 
 .header-tel {
@@ -1287,5 +1288,224 @@ body:has(.main-nav.active) {
   &:hover,
   &.active {
     background-image: var(--grd-altin);
+  }
+}
+
+// .portfoy-blur-bg-img {
+//   position: absolute;
+//   top: 0;
+//   left: 0;
+//   right: 0;
+//   width: 100%;
+//   -webkit-mask-image: linear-gradient(to top, transparent 25%, black 75%);
+//   mask-image: linear-gradient(to top, transparent 25%, black 75%);
+//   filter: blur(50px) saturate(2);
+//   z-index: -1;
+//   opacity: 0.35;
+//   height: 80vh;
+// }
+
+.portfoy-detay-wrapper {
+  position: relative;
+  @media (width >= inc.$lg) {
+    padding-right: 4rem;
+  }
+}
+
+.portfoy-lokasyon {
+  margin-bottom: 10px;
+  letter-spacing: 1px;
+  font-style: italic;
+}
+
+.portfoy-detay-title {
+  font-size: 3rem;
+  font-weight: 500;
+  margin-bottom: 14px;
+  text-wrap: balance;
+}
+
+.portfoy-detay-vitrin {
+  position: relative;
+  isolation: isolate;
+  overflow: hidden;
+  border-radius: var(--radius);
+
+  img {
+    aspect-ratio: 16 / 9;
+    width: 100%;
+    border-radius: var(--radius);
+    box-shadow: 0 10px 15px rgb(0 0 0 / 0.1);
+    position: relative;
+    z-index: 1;
+  }
+
+  .portfoy-detay-fiyat {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 25%;
+    background-image: linear-gradient(to bottom, transparent, #000);
+    color: #fff;
+    font-size: 3rem;
+    padding: 2rem 2.2rem;
+    z-index: 2;
+
+    &:has(.fiyat-yok) {
+      height: 20%;
+    }
+
+    .fiyat-yok {
+      font-size: 1.6rem;
+      font-style: italic;
+    }
+  }
+
+  .portfoy-detay-vitrin-actions {
+    display: flex;
+    gap: 10px;
+    position: absolute;
+    z-index: 2;
+    top: 0;
+    right: 0;
+    padding: 1rem;
+
+    button,
+    a {
+      background-color: #fff;
+      color: var(--clr-dark);
+      font-size: 15px;
+      font-weight: 600;
+      padding: 5px 10px;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      border-radius: var(--radius-lg);
+      border: 0;
+      cursor: pointer;
+      box-shadow: 2px 8px 15px rgb(0 0 0 / 0.1);
+      transition: var(--transition-all);
+
+      &:hover {
+        background-color: var(--kirmizi);
+        color: #fff;
+      }
+    }
+  }
+}
+
+.portfoy-detay-aside {
+  background-color: var(--clr-light);
+  border-radius: var(--radius);
+  padding: 1rem;
+  margin-top: 2rem;
+}
+
+.portfoy-detay-aside-user {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+
+  img {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+  }
+}
+
+.portfoy-detay-aside-user__name {
+  font-weight: 800;
+  font-size: 1.5rem;
+}
+
+.portfoy-detay-aside-user__tel {
+  font-size: 1.4rem;
+  font-weight: 300;
+  color: #777;
+
+  a {
+    color: currentColor;
+  }
+}
+
+.portfoy-detay-bir-bakista {
+  background-image: var(--grd-altin);
+  padding: 1rem 2rem;
+  margin-inline: 2rem;
+  position: relative;
+  margin-top: -2rem;
+  z-index: 2;
+  border-radius: var(--radius);
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 2rem;
+  justify-content: space-between;
+
+  .portfoy-tipi {
+    text-transform: uppercase;
+    font-weight: 800;
+    font-size: 1.3rem;
+    letter-spacing: 1px;
+  }
+}
+
+.portfoy-detay-bir-bakista__detaylar {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.portfoy-detay-bir-bakista__detay:not(:last-child) {
+  &::after {
+    content: "/";
+    margin-left: 7px;
+  }
+}
+
+.portfoy-metni {
+  border: 1px solid var(--clr-gri);
+  padding: 2rem;
+  border-radius: var(--radius);
+  position: relative;
+  isolation: isolate;
+  overflow-y: hidden;
+  height: 250px;
+  mask-image: linear-gradient(to bottom, #000, transparent);
+
+  p {
+    margin-bottom: 10px;
+    strong {
+      font-weight: 700;
+    }
+  }
+
+  &.show {
+    overflow-y: visible;
+    mask-image: none;
+    height: auto;
+  }
+}
+
+.btn-show-more {
+  background-color: var(--clr-dark);
+  color: #fff;
+  font-weight: 800;
+  font-size: 15px;
+  letter-spacing: 1px;
+  text-align: center;
+  margin-inline: auto;
+  padding: 8px 25px;
+  border: 0;
+  border-radius: var(--radius);
+  text-transform: uppercase;
+  display: block;
+  transition: var(--transition-all);
+  cursor: pointer;
+  position: relative;
+  margin-top: -20px;
+
+  &:hover {
+    background-color: var(--kirmizi);
   }
 }

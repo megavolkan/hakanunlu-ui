@@ -155,12 +155,25 @@
     mainNavBg.addEventListener("click", toggleNav);
   }
 
+  function showMore() {
+    if (document.querySelector(".portfoy-metni")) {
+      const portfoyMetni = document.querySelector(".portfoy-metni");
+      const btnShowMore = document.querySelector(".btn-show-more");
+
+      btnShowMore.addEventListener("click", function () {
+        portfoyMetni.classList.toggle("show");
+        portfoyMetni.classList.contains("show") ? (btnShowMore.innerText = "Daha Az...") : (btnShowMore.innerText = "Daha Fazla...");
+      });
+    }
+  }
+
   mainNavigation();
   // heroSlider()
   // telefonInput()
   portfoySlider();
   haberSlider();
   mainNav();
+  showMore();
   // initAcc('.accordion.v1', true);
   // scrollTop()
 })();
