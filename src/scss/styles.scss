@@ -1361,7 +1361,7 @@ body:has(.main-nav.active) {
     bottom: 0;
     left: 0;
     right: 0;
-    height: 25%;
+    height: 27%;
     background-image: linear-gradient(to bottom, transparent, #000);
     color: #fff;
     font-size: 3rem;
@@ -1470,6 +1470,7 @@ body:has(.main-nav.active) {
 .portfoy-detay-bir-bakista__detaylar {
   display: flex;
   gap: 0.5rem;
+  align-items: baseline;
 }
 
 .portfoy-detay-bir-bakista__detay:not(:last-child) {
@@ -1486,7 +1487,7 @@ body:has(.main-nav.active) {
   position: relative;
   isolation: isolate;
   overflow-y: hidden;
-  height: 250px;
+  height: 180px;
   mask-image: linear-gradient(to bottom, #000, transparent);
 
   p {
@@ -1819,4 +1820,51 @@ body:has(.main-nav.active) {
   font-weight: 700;
   font-size: 13px;
   @include inc.line-clamp(3);
+}
+
+.iletisim-adres {
+  font-style: normal;
+  a {
+    color: #838383;
+    &:hover {
+      color: var(--clr-primary);
+    }
+  }
+  .social-links {
+    justify-content: start;
+    a {
+      color: var(--clr-secondary);
+
+      &:hover {
+        color: var(--clr-primary);
+      }
+    }
+  }
+}
+
+.iletisim-adres-card {
+  padding-block: 1rem;
+
+  &:not(:last-child) {
+    border-bottom: 1px solid #e8e8e8;
+  }
+}
+
+.iletisim-adres-card__title {
+  font-weight: 700;
+  font-size: 13px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  margin-bottom: 8px;
+  color: var(--clr-secondary);
+}
+
+.iletisim-main-tel {
+  font-size: 2rem;
+}
+
+.iletisim-grid {
+  @media (width >= inc.$lg) {
+    gap: 5vw;
+  }
 }

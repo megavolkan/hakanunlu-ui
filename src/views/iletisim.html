@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="tr">
+@@include('./inc/_head.html')
+
+<body>
+  @@include('./inc/_header.html')
+  <div class="content-grid full-width bg-light">
+    <nav class="breadcrumb">
+      <a href="/">@@include('../icons/house.svg')</a>
+      <a href="/iletisim">İletişim</a>
+    </nav>
+  </div>
+
+  <main class="flow content-grid">
+
+    <section class="section">
+      <h1 class="section-baslik">İletişim</h1>
+      <div class="grid iletisim-grid">
+        <div class="span-lg-5">
+          <address class="iletisim-adres">
+            <div class="iletisim-adres-card">
+              <div class="iletisim-adres-card__title">
+                Beni Arayın
+              </div>
+              <div class="iletisim-adres-card__body">
+                <a href="tel:+90 (555) 502 00 00" class="iletisim-main-tel">+90 (555) 502 00 00</a>
+              </div>
+            </div>
+            <div class="iletisim-adres-card">
+              <div class="iletisim-adres-card__title">
+                E-Posta
+              </div>
+              <div class="iletisim-adres-card__body">
+                <a href="mailto:hakan.unlu@kww.com.tr">hakan.unlu@kww.com.tr</a>
+              </div>
+            </div>
+            <div class="iletisim-adres-card">
+              <div class="iletisim-adres-card__title">
+                Adres
+              </div>
+              <div class="iletisim-adres-card__body">
+                <p class="body-copy">Küçük Setli Sok. Denge Panorama N0:5-9 34750 Ataşehir / İSTANBUL</p>
+                <a href="tel:+902166886688">+90 (216) 688 66 88</a>
+              </div>
+            </div>
+            <div class="iletisim-adres-card">
+              <div class="iletisim-adres-card__title">
+                Sosyal Medya
+              </div>
+              <div class="iletisim-adres-card__body">
+                <ul class="social-links">
+                  <li><a href="#" title="Hakan Ünlü Kartvizit">@@include('../icons/person-vcard-fill.svg')</a></li>
+                  <li><a href="#" title="Hakan Ünlü LinkedIn">@@include('../icons/linkedin.svg')</a></li>
+                  <li><a href="#" title="Hakan Ünlü Instagram">@@include('../icons/instagram.svg')</a></li>
+                  <li><a href="#" title="Hakan Ünlü Youtube">@@include('../icons/youtube.svg')</a></li>
+                  <li><a href="#" title="Hakan Ünlü X">@@include('../icons/twitter-x.svg')</a></li>
+                </ul>
+
+              </div>
+            </div>
+          </address>
+        </div>
+        <div class="span-lg-7">
+          <form action="" class="form talep-formu">
+            <p>Formu doldurarak iletişime geçebilir veya mülkünüzün değerlemesinin yapılmasını talep edebilirsiniz.</p>
+            <div class="grid">
+              <div class="span-lg-6">
+                <input type="text" class="form-control" placeholder="ADINIZ *">
+              </div>
+              <div class="span-lg-6">
+                <input type="text" class="form-control" placeholder="SOYADINIZ *">
+              </div>
+              <div class="span-lg-6">
+                <input type="tel" class="form-control" placeholder="TELEFON NO *">
+              </div>
+              <div class="span-lg-6">
+                <input type="email" class="form-control" placeholder="E-POSTA *">
+              </div>
+              <div class="span-lg-6">
+                <input type="text" class="form-control" placeholder="ADA NO *">
+              </div>
+              <div class="span-lg-6">
+                <input type="text" class="form-control" placeholder="PARSEL NO *">
+              </div>
+              <div class="span-lg-12">
+                <input type="text" class="form-control" placeholder="MÜLK BİLGİSİ (İl, İlçe, Mahalle) *">
+              </div>
+              <div class="span-lg-12">
+                <button class="btn-altin-gradient btn-full" type="submit">BAŞVUR</button>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+
+    </section>
+  </main>
+
+  @@include('./inc/_footer.html')
+  @@include('./inc/_main-nav.html')
+</body>
+
+</html>
