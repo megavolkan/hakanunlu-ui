@@ -882,6 +882,12 @@ div:has(.main-hero-content) {
   opacity: 0.6;
 }
 
+.main-musteri-yorumlari {
+  .main-musteri-yorum-card-text {
+    @include inc.line-clamp(3);
+  }
+}
+
 .main-musteri-yorum-card {
   background-color: var(--clr-light);
   border-radius: var(--radius);
@@ -919,7 +925,6 @@ div:has(.main-hero-content) {
 .main-musteri-yorum-card-text {
   font-style: italic;
   opacity: 0.7;
-  @include inc.line-clamp(3);
 }
 
 .main-blog-grid {
